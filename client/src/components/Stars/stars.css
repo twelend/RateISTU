@@ -1,0 +1,47 @@
+.cont_stars{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 79px;
+    width: 265px;
+}
+
+.rating-area {
+	overflow: hidden;
+	width: 265px;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 24px;
+	padding: 0;
+    margin: 0 auto;
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 20px;
+	color: #B6C8D5;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: #EDF040;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: #EDF040;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: #EDF040;
+	text-shadow: 1px 1px #EDF040;
+}
+.rate-area > label:active {
+	position: relative;
+}

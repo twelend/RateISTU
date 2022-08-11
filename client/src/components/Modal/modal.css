@@ -1,0 +1,207 @@
+.modal{
+    width: 100vw;
+    height: 100vw;
+    background: rgba(106, 125, 126, .30);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+
+    transform: scale(0);
+}
+.modal img{
+    display: none;
+}
+
+.modal.active{
+    transform: scale(1);
+}
+.modal.active img{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 101;
+}
+
+
+.select-wrapper{
+    position: relative;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.select-wrapper::before{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translateY(-50%);
+
+    display: block;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 6px 0 6px;
+    border-color: #5de9fc transparent transparent transparent;
+
+    pointer-events: none;
+}
+
+.form_select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    color: #fff;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+
+    background: #323A4B;
+    width: 200px;
+
+    padding: 12px 0 12px 010px;
+    /* margin: 0 0 0 33.3%; */
+    border: 2px solid #323A4B;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.form_select:focus{
+    outline: none;
+    box-shadow: 0px 0px 0px 1px #323A4B, 0px 0px 10px #323a4b75;
+}
+
+.modal__content{
+    font-family: var(--font_family);
+    color: var(--color-text);
+    
+    margin: auto;
+    margin-top: 70px;
+    width: 850px;
+    height: 450px;
+    border-radius: 15px;
+    background: #BDE9C9;
+    padding: 0 125px 0;
+    box-shadow: 0px 4px 6px rgba(50, 58, 75, 0.15);
+}
+
+.modal__content img{
+    float: right;
+    margin: 10px -100px 0 0;
+
+    cursor: pointer;
+}
+.modal_select{
+    font-family: var(--font_family);
+    color: var(--color-text);
+}
+.modal__content h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+
+    margin-bottom: 70px;
+}
+.modal_select h3{
+    font-family: var(--font_family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 8px;
+
+
+    color: var(--color-text);
+}
+.modal_select .lang_h3{
+    font-family: var(--font_family);
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 15px;
+
+    color: var(--color-text);
+}
+
+
+.modal_form{
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.modal_form .form-button_disabled button {
+    width: 150px;
+    height: 40px;
+
+    background: var(--color-button);
+    font-family: var(--font_family);
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    
+    transition: all 0.4s ease;
+    color: #275465;
+    cursor: pointer;
+    margin: 0;
+}
+.modal_form .form-button{
+    margin: 0; 
+}
+.modal_form .form-button button{
+    width: 150px;
+    height: 40px;
+
+    background: var(--color-button);
+    font-family: var(--font_family);
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    
+    transition: all 0.4s ease;
+    color: #275465;
+    cursor: pointer; 
+}
+
+.modal_form .form-button button:hover{
+    font-size: 20px;
+    border-radius: 5px;
+    opacity: .9;
+}
+.modal_form .form-button_disabled button{
+    opacity: .5;
+    cursor: not-allowed;
+}
+.stars{
+    padding: 20px;
+}
+
+.close{
+    position: absolute;
+}

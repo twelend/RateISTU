@@ -1,0 +1,41 @@
+.vectors{
+    display: flex;
+
+    width: 1440px;
+
+    position:fixed;
+    bottom: 0;
+}
+
+.mobileImg{
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .vectors{
+        height: 600px;
+        margin-left: -200%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .vectors{
+        height: 580px;
+        width: 500px;
+        margin-left: -80px;
+        margin-bottom: -5px;
+    }
+    .mobileImg{
+        display: flex;
+    }
+    .mainImg{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .vectors{
+        height: 400px;
+        margin-left: -250px;
+    }
+}

@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
+
+:root{
+    --font_family: 'Libre Franklin', sans-serif;
+    --color-text: rgb(51, 59, 77);
+    --color-button: rgb(95, 233, 252);
+}
